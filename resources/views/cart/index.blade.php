@@ -56,7 +56,7 @@
                         </div>
                     </div>
             
-                    {{-- <div class="row py-5 p-4 bg-white rounded shadow-sm">
+                    <div class="row py-5 p-4 bg-white rounded shadow-sm">
                     <div class="col-lg-6">
                         <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
                         <div class="p-4">
@@ -75,20 +75,20 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Détail de la commande </div>
                         <div class="p-4">
                             <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
                             <ul class="list-unstyled mb-4">
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
+                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Sous-total </strong><strong>{{ getPrice(Cart::subTotal()) }}</strong></li>
+                                {{-- <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li> --}}
+                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Taxe</strong><strong>{{ getPrice(Cart::tax()) }}</strong></li>
                                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                                <h5 class="font-weight-bold">$400.00</h5>
+                                    <h5 class="font-weight-bold">{{ getPrice(Cart::total()) }}</h5>
                                 </li>
-                            </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+                            </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Passer à la caisse</a>
                         </div>
                     </div>
-                    </div> --}}
+                    </div>
 
                 </div>
             </div>
