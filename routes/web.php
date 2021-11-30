@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Products Routes
+Route::get('/boutique', 'ProductController@index')->name('products.index');
+Route::get('/boutique/{slug}', 'ProductController@show')->name('products.show');
